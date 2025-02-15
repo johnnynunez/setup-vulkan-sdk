@@ -12,7 +12,7 @@
             "tag": "vulkan-sdk-1.4.304.1",
             "configs": [ "Release" ],
             "architectures_comment": "requires Win32 to build the 32-bit loader",
-            "architectures": [ "x64", "Win32" ]
+            "architectures": [ "x64", "Win32", "aarch64" ]
         },
         "Vulkan-Loader": {
             "url": "https://github.com/KhronosGroup/Vulkan-Loader.git",
@@ -23,7 +23,7 @@
             ],
             "configs": [ "RelWithDebInfo" ],
             "architectures_comment": "requires Win32 to build the 32-bit loader",
-            "architectures": [ "x64", "Win32" ],
+            "architectures": [ "x64", "Win32", "aarch64" ],
             "dependencies_comment": "all dependencies need to build 32-bit too",
             "dependencies": {
                 "Vulkan-Headers": "VULKAN_HEADERS_INSTALL_DIR"
@@ -76,7 +76,7 @@
             ],
             "configs": [ "RelWithDebInfo" ],
             "architectures_comment": "requires Win32 to build 32-bit vulkaninfo",
-            "architectures": [ "x64", "Win32" ],
+            "architectures": [ "x64", "Win32" , "aarch64" ],
             "dependencies_comment": "all dependencies need to build 32-bit too",
             "dependencies": {
                 "Vulkan-Headers": "VULKAN_HEADERS_INSTALL_DIR",
@@ -216,7 +216,7 @@
             "tag": "vulkan-sdk-1.4.304.1",
             "configs": [ "RelWithDebInfo", "Debug" ],
             "architectures_comment": "requires Win32 to build 32-bit vulkaninfo",
-            "architectures": [ "x64", "Win32" ],
+            "architectures": [ "x64", "Win32" , "aarch64" ],
             "defines": [
                 "VOLK_INSTALL=ON",
                 "VOLK_PULL_IN_VULKAN=ON"
