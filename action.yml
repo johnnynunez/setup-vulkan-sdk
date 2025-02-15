@@ -23,7 +23,7 @@ inputs:
 runs:
   using: "composite"
   steps:
-    - uses: humbletim/vsdevenv-shell@83fd8dbc556acd591fb92a2f4a2a8d499dbbfb16
+    - uses: johnnynunez/vsdevenv-shell@v2
 
     - name: Resolve Vulkan SDK Configuration
       shell: bash
