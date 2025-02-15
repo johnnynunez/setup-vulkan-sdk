@@ -19,7 +19,7 @@ on:
         oses:
           description: 'Matrix OSes'
           required: true
-          default: '[ "ubuntu-latest", "ubuntu-22.04", "ubuntu-24.04-arm", "ubuntu-22.04-arm", "windows-latest", "macos-latest", "windows-2022", "macos-13" ]'
+          default: '[ "ubuntu-latest", "ubuntu-22.04", "ubuntu-24.04-arm", "ubuntu-22.04-arm", "windows-latest", "macos-latest" ]'
 jobs:
   setup-all-matrix:
     if: ${{ github.event.inputs.extra_tests == 'true' || github.event.inputs.extra_tests == 'matrix' }}
