@@ -1,4 +1,4 @@
-# setup-vulkan-sdk v1.4.0
+# setup-vulkan-sdk v1
 
 [![test setup-vulkan-sdk](https://github.com/johnnynunez/setup-vulkan-sdk/actions/workflows/ci.yml/badge.svg?branch=main)](https://github.com/johnnynunez/setup-vulkan-sdk/actions/workflows/ci.yml)
 
@@ -14,7 +14,7 @@ _note: if new to GitHub Actions please see GitHub Help Documentation [Quickstart
 
 ```yaml
   -name: Prepare Vulkan SDK
-   uses: johnnynunez/setup-vulkan-sdk@v1.4.0
+   uses: johnnynunez/setup-vulkan-sdk@v1
    with:
      vulkan-query-version: 1.4.304.1
      vulkan-components: Vulkan-Headers, Vulkan-Loader
@@ -28,7 +28,8 @@ Example SDK release numbers that are <span title="2024-02-08">currently</span> k
  - 1.3.204.1
  - 1.3.239.0
  - 1.3.275.0
- - 1.4.304.1
+ - 1.4.304.1  
+
 It is also possible to specify `latest` and the action will attempt to resolve automatically.
 
 NOTE: For production workflows it is recommended to create project-local copies of sdk config.json(s); see [Advanced](#Advanced-integration) example below.
@@ -66,7 +67,7 @@ However, depending on your project's needs, it might make more sense to use unat
       curl -o vulkan-sdk-config.json https://vulkan.lunarg.com/sdk/config/1.4.304.1/linux/config.json
 
   - name: Configure Vulkan SDK using the downloaded spec
-    uses: johnnynunez/setup-vulkan-sdk@v1.4.0
+    uses: johnnynunez/setup-vulkan-sdk@v1
     with:
       vulkan-config-file: vulkan-sdk-config.json
       vulkan-components: Vulkan-Headers, Vulkan-Loader
