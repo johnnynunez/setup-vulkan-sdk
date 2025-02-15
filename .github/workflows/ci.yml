@@ -1,6 +1,9 @@
 name: Setup
 on:
   push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
   workflow_dispatch:
       inputs:
         extra_tests:
