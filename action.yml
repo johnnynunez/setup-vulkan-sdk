@@ -1,4 +1,4 @@
-name: 'Setup Vulkan SDK (x86_64 && arm64)'
+name: 'Setup Vulkan SDK (Multi Arch)'
 description: 'Automatically builds Vulkan SDK components from source.'
 branding:
   icon: 'play'
