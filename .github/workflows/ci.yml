@@ -35,14 +35,14 @@ jobs:
           vulkan-query-version: ${{ matrix.version }}
           vulkan-components: ${{ github.event.inputs.components }}
           vulkan-use-cache: true
-      - name: checkout seanmiddleditch/gha-setup-vsdevenv@v4
+      - name: checkout johnnynunez/gha-setup-vsdevenv@v1
         if: runner.os == 'Windows'
         uses: actions/checkout@v4
         with:
-          repository: seanmiddleditch/gha-setup-vsdevenv
-          ref: v4
+          repository: johnnynunez/gha-setup-vsdevenv
+          ref: v1
           path: gha-setup-vsdevenv
-      - name: execute seanmiddleditch/gha-setup-vsdevenv@v4
+      - name: execute johnnynunez/gha-setup-vsdevenv@v1
         if: runner.os == 'Windows'
         shell: cmd
         working-directory: gha-setup-vsdevenv
@@ -162,7 +162,7 @@ jobs:
           vulkan-components: Vulkan-Headers, Vulkan-Loader
           vulkan-use-cache: true
 
-      - uses: seanmiddleditch/gha-setup-vsdevenv@v4
+      - uses: johnnynunez/gha-setup-vsdevenv@v1
         if: runner.os == 'Windows'
       - name: Test Vulkan SDK Install
         shell: powershell
